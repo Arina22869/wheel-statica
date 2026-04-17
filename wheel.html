@@ -87,8 +87,8 @@
 
     async function loadBalance() {
         try {
-            let userId = 1665864236; // твой Telegram ID
-            let response = await fetch(`https://bot_1776110705_6208_arina22869.bothost.net/balance/${userId}`);
+            let userId = 1665864236;
+            let response = await fetch(`http://109.172.114.4:8080/balance/${userId}`);
             let data = await response.json();
             userBalance = data.balance;
             userFreespins = data.freespins;
@@ -111,7 +111,7 @@
         
         try {
             let userId = 1665864236;
-            let response = await fetch(`https://bot_1776110705_6208_arina22869.bothost.net/spin/${userId}`, { method: 'POST' });
+            let response = await fetch(`http://109.172.114.4:8080/spin/${userId}`, { method: 'POST' });
             let data = await response.json();
             
             if (data.error) {
